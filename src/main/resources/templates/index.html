@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>index</title>
+    </head>
+    <body>
+        <a th:href="@{/login/goole}">Goole login</a>
+        <a th:href="@{/login/naver}">Naver login</a>
+        <a th:href="@{/login}">통합 Login</a><br>
+        <a th:href="@{/user}">로그인한 유저만 사용가능</a><br>
+        <div th:if="${session.user != null}">
+            [[${session.user.email}]],[[${session.user.name}]] <a th:href="@{/logout}">logout</a>
+        </div>
+    </body>
+</html>
